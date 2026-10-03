@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giraffe Coffee — кофейни в Бишкеке</title>
+  <meta name="description" content="Giraffe Coffee — сеть кофеен в Бишкеке. Кофе, завтраки, десерты и тропическая атмосфера. Всегда на высоте!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body data-lang="ru">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header" id="header">
+    <a class="brand" href="#top" aria-label="Giraffe Coffee">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <use href="#giraffe-mark"></use>
+      </svg>
+      <span class="brand__word">Giraffe</span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#about" class="nav__link" data-i18n="nav.about">О нас</a>
+      <a href="#menu" class="nav__link" data-i18n="nav.menu">Меню</a>
+      <a href="#locations" class="nav__link" data-i18n="nav.locations">Филиалы</a>
+      <a href="#contacts" class="nav__link" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+
+    <div class="header__right">
+      <div class="lang" role="group" aria-label="Language">
+        <button class="lang__btn is-active" data-lang-btn="ru">RU</button>
+        <span class="lang__sep"></span>
+        <button class="lang__btn" data-lang-btn="en">EN</button>
+      </div>
+      <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="hero__leaves" aria-hidden="true">
+        <svg class="leaf leaf--1" data-parallax="0.12" viewBox="0 0 100 100"><use href="#leaf"></use></svg>
+        <svg class="leaf leaf--2" data-parallax="0.22" viewBox="0 0 100 100"><use href="#leaf"></use></svg>
+        <svg class="leaf leaf--3" data-parallax="0.08" viewBox="0 0 100 100"><use href="#leaf"></use></svg>
+      </div>
+
+      <div class="hero__inner">
+        <svg class="hero__giraffe" id="heroGiraffe" viewBox="0 0 120 120" aria-hidden="true">
+          <use href="#giraffe-mark"></use>
+        </svg>
+        <h1 class="hero__word" aria-label="Giraffe Coffee">
+          <span class="hero__word-script">Giraffe</span>
+          <span class="hero__word-sub" data-i18n="hero.sub">coffee · бишкек</span>
+        </h1>
+        <p class="hero__tagline" data-i18n="hero.tagline">Всегда на высоте — кофе, завтраки и тропическая атмосфера в сердце города.</p>
+        <div class="hero__cta">
+          <a href="#menu" class="pill pill--solid" data-i18n="hero.ctaMenu">Смотреть меню</a>
+          <a href="#locations" class="pill pill--ghost" data-i18n="hero.ctaMap">Найти кофейню</a>
+        </div>
+      </div>
+
+      <div class="hero__scrollhint" aria-hidden="true"><span></span></div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track" id="marqueeTrack">
+          <span data-i18n-marquee>Кофе&nbsp;✦&nbsp;Завтраки&nbsp;✦&nbsp;Десерты&nbsp;✦&nbsp;Матча&nbsp;✦&nbsp;Смузи&nbsp;✦&nbsp;Выпечка&nbsp;✦&nbsp;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT / BRAND ===================== -->
+    <section class="about" id="about">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="about.eyebrow">О бренде</span>
+        <h2 class="title" data-i18n-html="about.title">Кофейня, где <u>тропики</u> встречают город</h2>
+      </div>
+
+      <div class="about__grid">
+        <figure class="about__photo reveal" data-tilt>
+          <img src="assets/img/interior.jpg" alt="Интерьер Giraffe Coffee — тропические растения и тёплый свет" loading="lazy">
+        </figure>
+        <div class="about__text reveal">
+          <p data-i18n="about.p1">Giraffe Coffee — бишкекская сеть кофеен с узнаваемым характером: много зелени, тёплый свет и кофе, сваренный как надо.</p>
+          <p data-i18n="about.p2">Забегайте на фильтр навынос или оставайтесь надолго — за завтраком, десертом и разговором.</p>
+          <div class="stats">
+            <div class="stat"><b>47+</b><span data-i18n="about.stat1">точек по стране</span></div>
+            <div class="stat"><b>4.8</b><span data-i18n="about.stat2">рейтинг на 2ГИС</span></div>
+            <div class="stat"><b>24/7</b><span data-i18n="about.stat3">флагман на Медерова</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MENU ===================== -->
+    <section class="menu" id="menu">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="menu.eyebrow">Меню</span>
+        <h2 class="title" data-i18n-html="menu.title">Избранное из <u>меню</u></h2>
+      </div>
+
+      <div class="menu__tabs reveal" role="tablist" id="menuTabs">
+        <button class="menu__tab is-active" role="tab" data-tab="coffee" data-i18n="menu.tab.coffee">Кофе</button>
+        <button class="menu__tab" role="tab" data-tab="cold" data-i18n="menu.tab.cold">Холодное</button>
+        <button class="menu__tab" role="tab" data-tab="dessert" data-i18n="menu.tab.dessert">Десерты</button>
+        <button class="menu__tab" role="tab" data-tab="kitchen" data-i18n="menu.tab.kitchen">Кухня</button>
+      </div>
+
+      <div class="menu__body reveal">
+        <figure class="menu__photo" data-tilt>
+          <img id="menuImage" src="assets/img/menu-coffee.jpg" alt="Позиция меню Giraffe Coffee" loading="lazy">
+        </figure>
+        <ul class="menu__list" id="menuList"></ul>
+      </div>
+
+      <p class="menu__note reveal" data-i18n="menu.note">Цены в сомах, ориентировочные — полное меню ждёт в кофейнях.</p>
+    </section>
+
+    <!-- ===================== LOCATIONS ===================== -->
+    <section class="locations" id="locations">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="loc.eyebrow">Филиалы</span>
+        <h2 class="title" data-i18n-html="loc.title">Ждём вас <u>рядом</u></h2>
+      </div>
+
+      <div class="locations__grid" id="locationsGrid"><!-- JS render --></div>
+
+      <div class="locations__all reveal">
+        <a class="pill pill--solid" href="https://2gis.kg/bishkek/branches/70000001019965452" target="_blank" rel="noopener">
+          <span data-i18n="loc.all">Все точки на 2ГИС</span>
+          <svg viewBox="0 0 24 24" class="pill__arrow"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTS / FOOTER ===================== -->
+    <footer class="footer" id="contacts">
+      <div class="footer__inner">
+        <p class="footer__script reveal">Giraffe</p>
+        <p class="footer__tag reveal" data-i18n="footer.tag">Всегда на высоте!</p>
+
+        <div class="footer__links reveal">
+          <a class="sociallink" href="https://www.instagram.com/giraffe_coffee/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 8.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8Zm0-2.1a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6Zm6.9-.3a1.24 1.24 0 1 1-2.48 0 1.24 1.24 0 0 1 2.48 0ZM12 4.2c-2.5 0-2.8 0-3.8.06a5 5 0 0 0-1.7.3 3.4 3.4 0 0 0-2 2 5 5 0 0 0-.3 1.7C4.2 9.2 4.2 9.5 4.2 12s0 2.8.06 3.8a5 5 0 0 0 .3 1.7 3.4 3.4 0 0 0 2 2 5 5 0 0 0 1.7.3c1 .06 1.3.06 3.8.06s2.8 0 3.8-.06a5 5 0 0 0 1.7-.3 3.4 3.4 0 0 0 2-2 5 5 0 0 0 .3-1.7c.06-1 .06-1.3.06-3.8s0-2.8-.06-3.8a5 5 0 0 0-.3-1.7 3.4 3.4 0 0 0-2-2 5 5 0 0 0-1.7-.3C14.8 4.2 14.5 4.2 12 4.2Z"/></svg>
+            <span>@giraffe_coffee</span>
+          </a>
+          <a class="sociallink" href="https://wa.me/996703333375" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Zm0 16.4c-1.5 0-2.9-.4-4.1-1.2l-.3-.2-2.7.7.7-2.6-.2-.3A7.4 7.4 0 1 1 12 19.4Zm4.2-5.5c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7.9-.1.2-.3.2-.5.1a6 6 0 0 1-3-2.6c-.2-.4.2-.4.6-1.2.1-.2 0-.3 0-.5l-.7-1.8c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1 0-.1-.2-.2-.4-.3Z"/></svg>
+            <span>WhatsApp</span>
+          </a>
+          <a class="sociallink" href="mailto:giraffecoffeekg@gmail.com">
+            <svg viewBox="0 0 24 24"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm8 7.3L5.3 7v10.8h13.4V7L12 12.3ZM6.6 6.6 12 10.5l5.4-3.9H6.6Z"/></svg>
+            <span>giraffecoffeekg@gmail.com</span>
+          </a>
+          <a class="sociallink" href="https://www.facebook.com/giraffecoffeekg/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.2-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21h3Z"/></svg>
+            <span>giraffecoffeekg</span>
+          </a>
+        </div>
+
+        <div class="footer__meta">
+          <span data-i18n="footer.city">Бишкек, Кыргызстан</span>
+          <span>© <span id="year"></span> Giraffe Coffee</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ===================== SVG SPRITE ===================== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <!-- Stylized giraffe mark -->
+      <g id="giraffe-mark">
+        <circle cx="32" cy="32" r="29.5" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <path d="M17 55 C 19 47 21 38 26 28 C 29 22 33 18 38 16 L 39.5 12.5 L 41 16.2 L 45 14.3 L 44.2 17.5 C 47 18.5 49 20.5 49 23 C 49 25.8 46.8 27.2 44 26.8 C 39 27.5 36 31 34.5 37 C 33 43 32 49 31 55 Z" fill="currentColor"/>
+        <circle cx="43.2" cy="21.4" r="1.15" fill="var(--green-950, #0B1F17)"/>
+      </g>
+      <!-- Monstera-ish leaf -->
+      <g id="leaf">
+        <path d="M50 6 C 76 14 92 36 88 62 C 85 82 68 94 50 94 C 32 94 15 82 12 62 C 8 36 24 14 50 6 Z" fill="currentColor"/>
+        <path d="M50 10 L 50 90 M 50 26 C 40 30 32 38 28 48 M 50 26 C 60 30 68 38 72 48 M 50 46 C 42 50 36 56 33 64 M 50 46 C 58 50 64 56 67 64 M 50 66 C 44 69 40 73 38 78 M 50 66 C 56 69 60 73 62 78" stroke="var(--green-950, #0B1F17)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      </g>
+    </defs>
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+</html>
